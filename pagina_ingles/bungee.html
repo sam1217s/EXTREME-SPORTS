@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canotaje - Aventura en el agua</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        /* Asegura que el contenedor cubra toda la altura de la pantalla */
+    }
+
+    /* Estilo para el encabezado fijo (principio) */
+    .principio {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        padding: 0 20px;
+        margin: 0;
+        background-color: #001876;
+        color: #ffffff;
+        justify-items: left;
+        position: fixed;
+        top: 0;
+        /* Se coloca en la parte superior */
+        width: 100%;
+        z-index: 1000;
+        /* Asegura que esté por encima de otros elementos */
+        height: 60px;
+        /* Ajusta la altura del encabezado */
+    }
+
+    /* Estilo del texto dentro del encabezado */
+    .t1 {
+        font-size: 25px;
+        margin: 10px 0;
+        /* Añade margen alrededor del texto */
+    }
+
+    /* Estilo para el botón de retorno */
+    #btnreturn {
+        background-color: #ffffff;
+        color: #001876;
+        border-radius: 30px;
+        padding: 0px;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 60px;
+    }
+
+    /* Estilo del título */
+    .title {
+        font-size: 60px;
+        color: #001876;
+        margin-top: 20px;
+    }
+
+    .padre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+        gap: 20px;
+        /* Espacio entre las secciones */
+    }
+
+    /* Estilo de la imagen */
+    .hero-image {
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho */
+        height: auto;
+        /* Mantiene la proporción original de la imagen */
+        object-fit: contain;
+        /* Asegura que la imagen no se recorte ni distorsione */
+        max-height: 500px;
+        /* Limita la altura máxima de la imagen */
+        display: block;
+        /* Elimina el espacio blanco debajo de la imagen */
+        margin: 0 auto;
+        /* Centra la imagen horizontalmente */
+    }
+
+    /* Estilos para la sección de descripción */
+    .description {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        margin: 0 10%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 65%;
+
+    }
+
+    .description h2 {
+        color: #001876;
+        font-size: 24px;
+    }
+    /* Estilos para la sección de información */
+    .info {
+        display: block;
+        /* Cambiado a bloque para disposición vertical */
+        padding: 20px;
+        background-color: #fff;
+        margin: 0 10%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 65%;
+
+    }
+
+    .contact-info,
+    .risks {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #001876;
+        font-size: 24px;
+    }
+
+    p {
+        color: #555;
+        font-size: 20px;
+    }
+
+    .pricing {
+        display: flex;
+        width: 65%;
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        margin: 0 10%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        gap: 10px;
+
+    }
+
+    .pricing>div {
+        width: 45%;
+    }
+
+    .pricing h2 {
+        color: #001876;
+        font-size: 24px;
+    }
+
+    .pricing ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .pricing li {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #555;
+    }
+
+
+    .cta {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #001876;
+        color: #fff;
+        font-size: 18px;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 20px;
+
+    }
+
+    .btn:hover {
+        background-color: #001876;
+    }
+
+    .final {
+        padding: 8px;
+        margin: 0;
+        background-color: #001876;
+        color: #ffffff;
+    }
+
+    .risk {
+        text-align: left;
+    }
+
+    .t1 {
+        color: #ffffff75;
+
+
+    }
+
+    .t2 {
+        color: #ffffff75;
+        margin-left: 75%;
+    }
+</style>
+
+
+<body>
+    <div class="principio">
+        <h3 class="t1">Extreme Sports San Gil</h3>
+        <button id="btnreturn" onclick="window.location.href='deportes_extremos.html'">Return</button>
+    </div>
+    <header>
+        <h1 class="title">Bungee</h1>
+        <img src="/pagina_ingles/deportes/bunge.jpg" alt="Bungee Image" class="hero-image">
+    </header>
+    <div class="padre">
+        <!-- Bungee Description -->
+        <section class="description">
+            <h2>What is Bungee?</h2>
+            <p>Bungee jumping is an extreme sport in which a person jumps from a great height, typically from a bridge, platform, or tower, while being attached to an elastic cord (bungee). The cord stretches as the person falls, allowing for a sudden stop before the jumper rebounds upward and falls again, repeating the process several times before coming to a stop. 
+            It is an adrenaline-filled experience that challenges the fear of heights and the sensation of freefall, providing a unique feeling of freedom and excitement. Bungee jumping is very popular in adventure tourism destinations, where it is offered as an activity for those seeking an extreme and thrilling experience.</p>
+        </section>
+
+        <!-- Risk Information Section -->
+        <section class="info">
+            <div class="risks">
+                <h2>Risks of Bungee Jumping</h2>
+                <p>Bungee jumping is an exciting activity, but it comes with certain risks that should be considered. One of the main dangers is the risk of physical injuries, such as neck and spine problems due to the impact at the end of the fall, or fractures and dislocations from the abrupt movements. There is also the risk of equipment failure, such as faulty ropes or harnesses, although this is rare when done with professionals. Additionally, the physical and psychological stress of the jump can affect people with heart issues or cause dizziness and disorientation, which can be dangerous. Weather conditions, such as wind or rain, can also increase the risk. While bungee jumping is generally safe, it is important to be aware of these risks and ensure it is done responsibly with the proper equipment.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing">
+            <div>
+                <h2>Pricing Rates</h2>
+                <ul>
+                    <li>Individual Jump (70 meters): approximately €25 per person</li>
+                    <li>Couple Jump (70 meters): approximately €40 per couple</li>
+                    <li>Individual Jump (100 meters): approximately €40 per person</li>
+                    <li>Group Jump (more than 5 people): approximately €30 per person</li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Phone: +34 123 456 789</p>
+                <p>Email: info@canotajeaventura.com</p>
+            </div>
+        </section>
+    </div>
+    <!-- Call to Action (Button) -->
+    <section class="cta">
+        <a  class="btn" onclick="window.location.href='form.html';">Sign Up Now!</a>
+    </section>
+    <div class="final">
+        <h3 class="t2">Copyright © 2025. All rights reserved</h3>
+    </div>
+</body>
+
+
+</html>

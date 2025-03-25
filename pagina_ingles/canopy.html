@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziplining - Adventure in the Air</title>
+    <link rel="stylesheet">
+</head>
+
+<body>
+    <div class="principio">
+        <h3 class="top-text">Extreme Sports San Gil</h3>
+        <button id="btnreturn" onclick="window.location.href='deportes_extremos.html'">Return</button>
+    </div>
+    <header>
+        <h1 class="title">Ziplining</h1>
+        <img src="/pagina_ingles/deportes/canopy.jpg" alt="Ziplining Image" class="hero-image">
+    </header>
+    <div class="container">
+        <section class="description">
+            <h2>What is Ziplining?</h2>
+            <p>It's an extreme sport activity that involves sliding along steel cables using harnesses and pulleys,
+                typically in a natural setting like forests or mountains. This activity allows participants to enjoy
+                panoramic views and experience an adrenaline rush while moving from one platform to another.</p>
+        </section>
+
+        <section class="info">
+            <div class="risks">
+                <h2>Ziplining Risks</h2>
+                <ul>
+                    <li>Falls from heights</li>
+                    <li>Equipment failure</li>
+                    <li>Human error</li>
+                    <li>Weather conditions</li>
+                    <li>Physical injuries</li>
+                    <li>Preexisting health conditions</li>
+                    <li>Lack of proper supervision</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <div>
+                <h2>Pricing</h2>
+                <ul>
+                    <li>One-way route: €10 per person</li>
+                    <li>Round-trip route: €20 per person</li>
+                    <li>Multiple routes: €25 round-trip per person</li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Phone: +56 789 012 345</p>
+                <p>Email: info@ziplineadventure.com</p>
+            </div>
+        </section>
+    </div>
+    <section class="cta">
+        <a class="btn" onclick="window.location.href='form.html';">Sign Up Now!</a>
+    </section>
+    <div class="footer">
+        <h3 class="copyright">Copyright © 2025. All rights reserved</h3>
+    </div>
+
+    <style>
+        .principio {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            padding: 0 20px;
+            margin: 0;
+            background-color: #001876;
+            color: #ffffff;
+            justify-items: left;
+            position: fixed;
+            top: 0;
+            /* Se coloca en la parte superior */
+            width: 100%;
+            z-index: 1000;
+            /* Asegura que esté por encima de otros elementos */
+            height: 60px;
+            /* Ajusta la altura del encabezado */
+        }
+
+        #btnreturn {
+            background-color: #ffffff;
+            color: #001876;
+            border-radius: 30px;
+            padding: 0px;
+            width: 150px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 25px;
+            margin: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 60px;
+        }
+
+        .title {
+            font-size: 60px;
+            color: #001876;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: 500px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .description {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            margin: 0 10%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 65%;
+        }
+
+        .description h2 {
+            color: #001876;
+            font-size: 24px;
+        }
+
+        .description p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .info {
+            display: block;
+            padding: 20px;
+            background-color: #fff;
+            margin: 0 10%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 65%;
+        }
+
+        .contact-info,
+        .risks {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #001876;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .pricing {
+            display: flex;
+            width: 65%;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            margin: 0 10%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            gap: 10px;
+        }
+
+        .pricing>div {
+            width: 45%;
+        }
+
+        .pricing h2 {
+            color: #001876;
+            font-size: 24px;
+        }
+
+        .pricing ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pricing li {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .risks ul {
+            margin-left: 35%;
+        }
+
+        .risks {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #001876;
+            color: #fff;
+            font-size: 18px;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        .btn:hover {
+            background-color: #001876;
+        }
+
+        .header-top,
+        .footer {
+            padding: 8px;
+            margin: 0;
+            background-color: #001876;
+            color: #ffffff;
+        }
+
+        .top-text,
+        .copyright {
+            color: #ffffff75;
+        }
+
+        .copyright {
+            margin-left: 75%;
+        }
+
+        @media (max-width: 700px) {
+            .title {
+                font-size: 36px;
+            }
+
+            .description,
+            .info,
+            .pricing {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .risks ul {
+                margin-left: 20px;
+                padding-left: 20px;
+            }
+
+            .pricing {
+                flex-direction: column;
+            }
+
+            .pricing>div {
+                width: 100%;
+            }
+
+            .copyright {
+                margin-left: 20%;
+                text-align: center;
+            }
+
+            .hero-image {
+                max-height: 300px;
+            }
+        }
+    </style>
+</body>
+
+</html>

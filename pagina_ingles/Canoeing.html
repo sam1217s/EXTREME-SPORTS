@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canotaje - Aventura en el agua</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        /* Asegura que el contenedor cubra toda la altura de la pantalla */
+    }
+
+    /* Estilo para el encabezado fijo (principio) */
+    .principio {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        padding: 0 20px;
+        margin: 0;
+        background-color: #001876;
+        color: #ffffff;
+        justify-items: left;
+        position: fixed;
+        top: 0;
+        /* Se coloca en la parte superior */
+        width: 100%;
+        z-index: 1000;
+        /* Asegura que esté por encima de otros elementos */
+        height: 60px;
+        /* Ajusta la altura del encabezado */
+    }
+
+    /* Estilo del texto dentro del encabezado */
+    .t1 {
+        font-size: 25px;
+        margin: 10px 0;
+        /* Añade margen alrededor del texto */
+    }
+
+    /* Estilo para el botón de retorno */
+    #btnreturn {
+        background-color: #ffffff;
+        color: #001876;
+        border-radius: 30px;
+        padding: 0px;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 60px;
+    }
+
+    /* Estilo del título */
+    .title {
+        font-size: 60px;
+        color: #001876;
+        margin-top: 20px;
+    }
+
+    .padre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+        gap: 20px;
+        /* Espacio entre las secciones */
+    }
+
+    /* Estilo de la imagen */
+    .hero-image {
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho */
+        height: auto;
+        /* Mantiene la proporción original de la imagen */
+        object-fit: contain;
+        /* Asegura que la imagen no se recorte ni distorsione */
+        max-height: 500px;
+        /* Limita la altura máxima de la imagen */
+        display: block;
+        /* Elimina el espacio blanco debajo de la imagen */
+        margin: 0 auto;
+        /* Centra la imagen horizontalmente */
+    }
+
+    /* Estilos para la sección de descripción */
+    .description {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        margin: 0 10%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 65%;
+
+    }
+
+    .description h2 {
+        color: #001876;
+        font-size: 24px;
+    }
+    /* Estilos para la sección de información */
+    .info {
+        display: block;
+        /* Cambiado a bloque para disposición vertical */
+        padding: 20px;
+        background-color: #fff;
+        margin: 0 10%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 65%;
+
+    }
+
+    .contact-info,
+    .risks {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #001876;
+        font-size: 24px;
+    }
+
+    p {
+        color: #555;
+        font-size: 20px;
+    }
+
+    .pricing {
+        display: flex;
+        width: 65%;
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        margin: 0 10%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        gap: 10px;
+
+    }
+
+    .pricing>div {
+        width: 45%;
+    }
+
+    .pricing h2 {
+        color: #001876;
+        font-size: 24px;
+    }
+
+    .pricing ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .pricing li {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #555;
+    }
+
+
+    .cta {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #001876;
+        color: #fff;
+        font-size: 18px;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 20px;
+
+    }
+
+    .btn:hover {
+        background-color: #001876;
+    }
+
+    .final {
+        padding: 8px;
+        margin: 0;
+        background-color: #001876;
+        color: #ffffff;
+    }
+
+    .risk {
+        text-align: left;
+    }
+
+    .t1 {
+        color: #ffffff75;
+
+
+    }
+
+    .t2 {
+        color: #ffffff75;
+        margin-left: 75%;
+    }
+</style>
+
+<body>
+    <div class="principio">
+        <h3 class="t1">Extreme Sports San Gil </h3>
+        <button id="btnreturn" onclick="window.location.href='deportes_extremos.html'">Return</button>
+    </div>
+    <header>
+        <h1 class="title">Canoeing - Adventure on the Water</h1>
+        <img src="/pagina_ingles/deportes/canotaje.jpg" alt="Canoeing Image" class="hero-image">
+    </header>
+    <div class="padre">
+        <!-- Descripción del Canotaje -->
+        <section class="description">
+            <h2>What is Canoeing?</h2>
+            <p>Canoeing is an adventurous water sport that is practiced in boats like canoes or kayaks. It involves
+                navigating rivers, lakes, or seas using a paddle to propel the boat. It is an exciting activity that
+                allows you to enjoy nature from a unique perspective while testing balance and physical endurance.
+                Additionally, canoeing is ideal for group activities or individual experiences, making it accessible to
+                both beginners and experienced athletes.</p>
+        </section>
+
+        <!-- Sección de Información -->
+        <section class="info">
+            <div class="risks">
+                <h2>Risks of Canoeing</h2>
+                <p>Canoeing is an exciting activity, but it carries some inherent risks such as falls into the water,
+                    bumps, or injuries caused by the movement of the kayak or canoe. It is crucial to follow the guide's
+                    instructions and use the appropriate safety equipment. Capsizing or overturning the canoe: One of
+                    the most common risks is capsizing in the water, which can be dangerous if the water is cold, fast,
+                    or if you are in remote areas. Drowning: Although many Physical injuries: Falls, bumps, Fast water
+                    currents: Navigating</p>
+            </div>
+        </section>
+
+        <!-- Tarifa de Precios -->
+        <section class="pricing">
+            <div>
+                <h2>Price Rates</h2>
+                <ul>
+                    <li>1-hour route: 20€ per person</li>
+                    <li>2-hour route: 35€ per person</li>
+                    <li>3-hour route: 50€ per person</li>
+                    <li>Full-day group excursion (more than 5 people): 150€</li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Phone: +34 123 456 789</p>
+                <p>Email: info@canotajeaventura.com</p>
+            </div>
+        </section>
+    </div>
+    <!-- Llamado a la acción (botón) -->
+    <section class="cta">
+        <a class="btn"onclick="window.location.href='form.html';">Sign up now!</a>
+    </section>
+    <div class="final">
+        <h3 class="t2">Copyright © 2025. All rights reserved</h3>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Background: Passion for Adventure</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0c003a, #001876);
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .uno {
+            padding: 150px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .galeria {
+            height: 200px;
+            width: 150px;
+        }
+
+        .galeriimgs {
+            width: 350px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            animation: gallery 30s linear infinite;
+            cursor: pointer;
+        }
+
+        .galeriimgs span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i)*45deg)) translateZ(500px);
+            -webkit-box-reflect: below 2.5px linear-gradient(transparent, transparent, rgba(3, 3, 3, 0.2));
+        }
+
+        .galeriimgs span img {
+            position: absolute;
+            border-radius: 10px;
+            border: 6px ridge #ccc;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes gallery {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+
+        .parent>div {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            background-size: cover;
+        }
+
+        .parent>div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .parent>div img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .div1 {
+            grid-column: 1 / -1;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            background-image: url("https://www.santanderalextremo.com/wp-content/uploads/2018/07/SAN-GIL-SANTANDER-AL-EXTREMO.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .div1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .div1 h1,
+        .div1 p,
+        .div1 .btn {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .div1 p {
+            font-size: 25px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 16px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 0 0 12px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0 0 20px;
+        }
+
+        .btn {
+            background-color: #74019ac1;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .btnprin {
+            background-color: #ff6e6100;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1rem;
+            font-weight: 700;
+            width: 60%;
+            text-transform: uppercase;
+            transform: scale(1.05);
+        }
+
+        .btnprin:hover {
+            background-color: #ca03cd;
+            transform: scale(1.05);
+        }
+
+        .btn:hover {
+            background-color: #a000da;
+            transform: scale(1.05);
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: rgba(0, 0, 0, 0.642);
+            color: white;
+            font-size: 10px;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            justify-content: center;
+            margin: 0;
+            justify-items: center;
+        }
+
+        .head {
+            margin: 0;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: rgba(0, 0, 0, 0.564);
+            color: white;
+            font-size: 10px;
+            padding: 20px;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            gap: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .parent {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .parent {
+                grid-template-columns: 1fr;
+                padding-top: 100px;
+            }
+
+            .div1 {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .div1 p {
+                font-size: 1.1rem;
+            }
+
+            header {
+                grid-template-columns: 1fr;
+                padding: 10px;
+                position: relative;
+            }
+
+            .btnprin {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            footer {
+                grid-template-columns: 1fr 1fr;
+                padding: 15px;
+            }
+
+            .galeriimgs {
+                width: 280px;
+                height: 160px;
+            }
+
+            .galeriimgs span {
+                transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .galeriimgs {
+                width: 250px;
+                height: 140px;
+            }
+
+            .galeriimgs span {
+                transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+            }
+
+            .parent>div img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="btnprin" id="btnInicio">🏠 Home</button>
+        <button class="btnprin" id="btnExperiencias">🏔️ Experiences</button>
+        <button class="btnprin" id="btngaleria">🎥 Gallery</button>
+        <button class="btnprin" id="btnMore">🌍 More</button>
+    </header>
+    <div class="parent">
+        <div class="div1">
+            <h1>San Gil Extreme: Passion for Adventure</h1>
+            <p>Discover the most exciting experiences in Colombia's adventure capital</p>
+        </div>
+        <div class="div2">
+            <img src="https://media.istockphoto.com/id/522078473/es/foto/paraglider-flying-over-mountains.jpg?s=612x612&w=0&k=20&c=B-1Ul9nSuZq33ykBoncJ_ZNBz5vX60yqytxoxppoGzs="
+                alt="Paragliding">
+            <h2>Paragliding</h2>
+            <p>"Fly high, feel the freedom." Experience the adrenaline of paragliding as you soar through the skies and
+                enjoy unforgettable views.</p>
+            <button class="btn" onclick="window.location.href='parapente.html';">Explore</button>
+        </div>
+        <div class="div3">
+            <img src="https://weekend-bucket.s3.amazonaws.com/Canotaje_Rio_Fonce_5_a7764bab7c.jpg" alt="Canoeing">
+            <h2>Canoeing</h2>
+            <p>"Conquer the waters, feel the adventure." Paddle with strength and challenge the current while enjoying
+                canoeing in stunning natural landscapes.</p>
+            <button class="btn" onclick="window.location.href='Canoeing.html';">Explore</button>
+        </div>
+        <div class="div4">
+            <img src="https://www.sangildeportesextremos.com/wp-content/uploads/2023/09/bungee-sangil-1.jpg"
+                alt="Bungee Jumping">
+            <h2>Bungee Jumping</h2>
+            <p>"Jump into the void, feel the thrill." Live the adrenaline of bungee jumping and experience free fall at
+                its fullest.</p>
+            <button class="btn" onclick="window.location.href='bungee.html';">Explore</button>
+        </div>
+        <div class="div5">
+            <img src="https://www.sangildeportesextremos.com/wp-content/uploads/2023/09/cueva-del-indio.jpg"
+                alt="Caving">
+            <h2>Caving</h2>
+            <p>"Venture into the unknown, explore the depths." Caving takes you on a journey to discover mysterious
+                caves and unique underground formations.</p>
+            <button class="btn" onclick="window.location.href='espeleismo.html';">Explore</button>
+        </div>
+        <div class="div6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2vGoz1qz6avP6828UjvhFo9HbYiRlYFm5QQ&s"
+                alt="Rappelling">
+            <h2>Rappelling</h2>
+            <p>"Descend with courage, conquer the vertical." Rappelling challenges you to descend rocky walls and
+                cliffs, facing gravity while enjoying the thrill of each drop.</p>
+            <button class="btn" onclick="window.location.href='rappel.html';">Explore</button>
+        </div>
+        <div class="div7">
+            <img src="https://t3.ftcdn.net/jpg/04/64/93/38/360_F_464933840_TD9sLGgCYPISNfmMDRtjJqL2xhIKRQOR.jpg"
+                alt="Zip Line">
+            <h2>Zip Line</h2>
+            <p>"Fly between the treetops, feel the adrenaline of the air." The zip line lets you traverse the heights of
+                the jungle, sliding from platform to platform while enjoying spectacular views.</p>
+            <button class="btn" onclick="window.location.href='canopy.html';">Explore</button>
+        </div>
+    </div>
+    <div class="uno">
+        <div class="galeriimgs">
+            <span style="--i:1"><img class="galeria" src="/pagina_ingles/galeria/1.jpg" alt="Adventure 1"></span>
+            <span style="--i:2"><img class="galeria" src="/pagina_ingles/galeria/2.jpg" alt="Adventure 2"></span>
+            <span style="--i:3"><img class="galeria" src="/pagina_ingles/galeria/4.jpg" alt="Adventure 3"></span>
+            <span style="--i:4"><img class="galeria" src="/pagina_ingles/galeria/5.jpg" alt="Adventure 4"></span>
+            <span style="--i:5"><img class="galeria" src="/pagina_ingles/galeria/6.jpg" alt="Adventure 5"></span>
+            <span style="--i:6"><img class="galeria" src="/pagina_ingles/galeria/7.jpg" alt="Adventure 6"></span>
+            <span style="--i:7"><img class="galeria"
+                    src="https://static.wixstatic.com/media/ce3276_5944c2afc43c40d9af0e56db70f987b4~mv2.jpg/v1/fill/w_582,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ce3276_5944c2afc43c40d9af0e56db70f987b4~mv2.jpg"
+                    alt="Adventure 7"></span>
+            <span style="--i:8"><img class="galeria"
+                    src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0c/df/29/34.jpg"
+                    alt="Adventure 8"></span>
+        </div>
+    </div>
+    <footer>
+        <div class="div8">
+            <h2>Our Story</h2>
+            <button class="btn">Read more</button>
+        </div>
+        <div class="div9">
+            <h2>Contact</h2>
+            <button class="btn">Call us</button>
+        </div>
+        <div class="div10">
+            <h2>Follow us</h2>
+            <button class="btn">Social media</button>
+        </div>
+        <div class="div11">
+            <h2>Events</h2>
+            <button class="btn">More information</button>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("btnInicio").addEventListener("click", function () {
+            document.querySelector(".div1").scrollIntoView({ behavior: "smooth" });
+        });
+        document.getElementById("btnExperiencias").addEventListener("click", function () {
+            document.querySelector(".div2").scrollIntoView({ behavior: "smooth" });
+        });
+        document.getElementById("btngaleria").addEventListener("click", function () {
+            document.querySelector(".uno").scrollIntoView({ behavior: "smooth" });
+        });
+        document.getElementById("btnMore").addEventListener("click", function () {
+            document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>
